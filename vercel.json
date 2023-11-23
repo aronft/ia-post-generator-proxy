@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "devCommand": "npm run dev",
+  "builds": [
+    {
+      "src": "src/server.ts", 
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/src/server.ts"
+    }
+  ]
+}
